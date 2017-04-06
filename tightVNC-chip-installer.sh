@@ -40,6 +40,9 @@ WantedBy=multi-user.target
 
 EOL
 
+# Clear screen
+reset
+
 # Finishing up
 echo "+------------------------------------------------------+"
 echo "|                   Congratulation !                   |"
