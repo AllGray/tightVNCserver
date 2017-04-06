@@ -43,8 +43,8 @@ WantedBy=multi-user.target
 EOL
 
 # Finish config
-read -r hostname</etc/hostname
-sed "s/\bUser=\b/&$hostname/" /etc/systemd/system/tightvncserver.service
+read -r hostname < /etc/hostname
+sed "s/User=/User=$hostname/g" /etc/systemd/system/tightvncserver.service
 
 # Give out some permissions
 sudo chown root:root /etc/systemd/system/tightvncserver.service
