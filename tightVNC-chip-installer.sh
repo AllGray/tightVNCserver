@@ -6,6 +6,18 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+
+# Grab HOSTNAME
+echo "+-----------------------------------------------------------+"
+echo "|                         IMPORTANT                         |"
+echo "|             We need to know your HOSTNAME for             |"
+echo "|                     The congifuration                     |"
+echo "|               Please type in your HOSTNAME.               |"
+echo "|          The HOSTNAME is the name after chip@             |"
+echo "+-----------------------------------------------------------+"
+
+read -p "Type your HOSTNAME : " hostname
+
 # Install VNC server
 apt-get -y install tightvncserver
 
@@ -32,10 +44,9 @@ After=sshd.service
 [Service]
 Type=dbus
 ExecStart=/usr/bin/tightvncserver :1
-User=chip
+"User=$hostname"
 Type=forking
 
-[Install]
 WantedBy=multi-user.target
 
 EOL
