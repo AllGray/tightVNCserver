@@ -10,13 +10,14 @@ fi
 apt-get -y install tightvncserver
 
 # Clear screen
+reset
 
 # Start info
 echo "+-----------------------------------------------------------+"
 echo "|                         IMPORTANT                         |"
 echo "|             Set the password for your install             |"
 echo "|                    And don't forget it                    |"
-echo "|    For the view-only password, you can just press "n"     |"
+echo "|     For the view-only password, you can just press n      |"
 echo "+-----------------------------------------------------------+"
 
 # Start the VNC server and set password
