@@ -53,6 +53,11 @@ WantedBy=multi-user.target
 
 EOL
 
+# Give out some permissions
+sudo chown root:root /etc/systemd/system/tightvncserver.service
+sudo chmod 755 /etc/systemd/system/tightvncserver.service
+sudo systemctl enable tightvncserver.service
+
 # Clear screen
 reset
 
