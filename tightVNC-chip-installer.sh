@@ -44,7 +44,7 @@ After=sshd.service
 [Service]
 Type=dbus
 ExecStart=/usr/bin/tightvncserver :1
-"User=$hostname"
+User=$hostname
 Type=forking
 
 WantedBy=multi-user.target
