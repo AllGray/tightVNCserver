@@ -6,9 +6,6 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-# Clear screen
-reset
-
 # Install VNC server
 apt-get -y install tightvncserver
 
@@ -20,7 +17,7 @@ echo "+-----------------------------------------------------------+"
 echo "|                         IMPORTANT                         |"
 echo "|             Set the password for your install             |"
 echo "|                    And don't forget it                    |"
-echo "|     For the view-only password, you can just press n      |"
+echo "|      For the view-only password you can just press n      |"
 echo "+-----------------------------------------------------------+"
 
 # Start the VNC server and set password
@@ -56,7 +53,7 @@ reset
 
 # Finishing up
 echo "+------------------------------------------------------+"
-echo "|                   Congratulation !                   |"
+echo "|                   Congratulation!!                   |"
 echo "|                 Your install is done                 |"
 echo "|  You can access the VNC server from most VNCviewers  |"
 echo "|         Just go to server.local.ip.address:1         |"
@@ -65,5 +62,5 @@ echo "|                                                      |"
 echo "|                                                      |"
 echo "|                                                      |"
 echo "|                                                      |"
-echo "|    This installer was brought to you by AllGray! !   |"
+echo "|    This installer was brought to you by AllGray!!    |"
 echo "+------------------------------------------------------+"
