@@ -6,6 +6,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+# Clear screen
+reset
 
 # Grab HOSTNAME
 echo "+-----------------------------------------------------------+"
